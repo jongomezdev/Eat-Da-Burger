@@ -1,9 +1,13 @@
 const connection = require("./connection.js");
 
-selectAll();
+const orm = {
+  selectAll: async (cb) => {},
 
-insertOne();
+  insertOne: async function (value, cb) {},
 
-updateOne();
+  updateOne: async function (value, cb) {},
+
+  delete: async function (cb) {},
+};
 
 module.exports = orm;
