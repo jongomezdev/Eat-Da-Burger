@@ -12,6 +12,21 @@ router.get("/", (req, res) => {
       burgers: data,
       devoured: devoured.length,
     };
+    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
+
+router.post("/api/burgers", (req, res) => {
+  burger.create();
+});
+
+router.patch("/api/burger/:id", (req, res) => {
+  burger.update();
+});
+
+router.delete("/api/burgers", (req, res) => {
+  burger.delete();
+});
+
+module.exports = routers;
