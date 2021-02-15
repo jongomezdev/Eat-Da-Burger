@@ -1,1 +1,32 @@
-<h1>Eat Da Burger</h1>
+<h1 class="text-center">Eat Da Burger</h1>
+
+<div class="container">
+
+
+  <form action="">
+    <div class="input-group">
+        <label for=""></label>
+        <input type="text" class="form-control" placeholder="Create a burger!">
+      <div class="input-group-append">
+        <button class="btn" type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col">
+      <h2>Burgers</h2>
+      <ul>
+        {{#each burgers}}
+        <li>
+          <p>{{this.id}}. {{this.burger_name}}</p>
+          <button data-id='{{this.id}}' class="btn">Devour</button>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+
+</div>
