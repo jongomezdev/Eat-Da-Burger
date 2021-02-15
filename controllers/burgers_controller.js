@@ -8,6 +8,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   burger.all((err, data) => {
     if (err) return res.status(500).end();
+    console.table(data);
     const devoured = data.filter((burger) => burger.devoured);
     hbsObject = {
       burgers: data,
@@ -21,6 +22,7 @@ router.get("/", (req, res) => {
 router.post("/api/burgers", (req, res) => {
   burger.create(req.body.burger_name, (err, data) => {
     if (err) return res.status(500).end();
+    console.table(data);
     res.status(201).end();
   });
 });
@@ -28,6 +30,7 @@ router.post("/api/burgers", (req, res) => {
 router.patch("/api/burger/:id", (req, res) => {
   burger.update(req.params.id, (err, data) => {
     if (err) return res.status(500).end();
+    console.table(data);
     res.status(200).end();
   });
 });
@@ -35,6 +38,7 @@ router.patch("/api/burger/:id", (req, res) => {
 router.delete("/api/burgers", (req, res) => {
   burger.delete((err, data) => {
     if (err) return res.status(500).end();
+    console.table(data);
     res.status(200).end();
   });
 });
