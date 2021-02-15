@@ -1,7 +1,7 @@
 const util = require("util");
 const connection = require("./connection.js");
 const query = util.promisify(connection.query).bind(connection);
-// Callback as the last argument, and returns a version that returns promises.
+// Callback as the last argument, return a version that returns promises.
 const orm = {
   selectAll: async (cb) => {
     try {
@@ -23,9 +23,27 @@ const orm = {
     }
   },
 
-  updateOne: async function (value, cb) {},
+  updateOne: async function (value, cb) {
+    try {
+      let queryString = "UPDATE burgers SET devoured = 1 ";
+      queryString += "WHERE burgers.id = ? ";
+      const data = await query(queryString, value);
+      cb(null, data);
+    } catch (err) {
+      cb(err);
+    }
+  },
 
-  delete: async function (cb) {},
+  delete: async function (cb) {
+    try {
+      let queryString = "DELETE FROM burgers ";
+      queryString += "WHERE burgers.devoured = 1";
+      const data = await query(queryString);
+      cb(null, data);
+    } catch (err) {
+      cb(err);
+    }
+  },
 };
 
 module.exports = orm;
