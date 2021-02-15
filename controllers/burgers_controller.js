@@ -1,4 +1,5 @@
 const express = require("express");
+const { end } = require("../config/connection.js");
 const burger = require("../models/burger.js");
 const router = express.Router();
 
@@ -25,11 +26,17 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.patch("/api/burger/:id", (req, res) => {
-  burger.update();
+  burger.update(req.params.id, (err, data) => {
+    if (err) return res.status(500).end();
+    res.status(200).end();
+  });
 });
 
 router.delete("/api/burgers", (req, res) => {
-  burger.delete();
+  burger.delete((err, data) => {
+    if (err) return res.status(500).end();
+    res.status(200).end();
+  });
 });
 
 module.exports = router;
