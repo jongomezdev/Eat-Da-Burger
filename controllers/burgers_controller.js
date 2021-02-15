@@ -29,4 +29,4 @@ router.delete("/api/burgers", (req, res) => {
   burger.delete();
 });
 
-module.exports = routers;
+module.exports = router;

@@ -17,5 +17,5 @@ const routes = require("./controllers/burgers_controller");
 app.use(routes);
 
 app.listen(PORT, () => {
-  console.log(`Server listening on: ${PORT}`);
+  console.log(`Serving on port ${PORT}`);
 });
