@@ -4,7 +4,7 @@
 
 <div class="container">
 
-  <div>
+  <div class="img-container">
     <img src="assets/imgs/burger.png" alt="Burger Image">
   </div>
 
@@ -20,21 +20,19 @@
 {{!-- ******************** Burgers ************************ --}}
   <div class="row">
     <div class="col">
-      <h2 class="text-center">Burgers</h2>
-      <ul>
+      <h2 class="text-center display-4">Burgers</h2>
         {{#each burgers}}
         {{#unless this.devoured}}
-        <li>
-          <p>{{this.id}}. {{this.burger_name}}</p>
-          <button data-id="{{this.id}}" class="btn devour-btn">Devour</button>
-        </li>
+         <div class="text">
+          {{this.id}}. {{this.burger_name}}
+          <button data-id="{{this.id}}" class="btn btn-sm devour-btn">Devour</button>
+        </div>
         {{/unless}}
         {{/each}}
-      </ul>
     </div>
 {{!-- **************** Devoured ********************* --}}
     <div class="col">
-      <h2 class="text-center">Devoured</h2>
+      <h2 class="text-center display-4">Devoured</h2>
       <ul>
         {{#each burgers}}
         {{#if this.devoured}}

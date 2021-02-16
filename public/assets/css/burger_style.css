@@ -29,3 +29,14 @@ img {
   height: 30vh;
   width: 20vw;
 }
+
+.img-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  padding: 10px 0px 10px 20px;
+  border-radius: 10px;
+  margin: 10px 10px 0px 0px;
+}
