@@ -8,6 +8,7 @@ $("#create-burger").submit(() => {
 });
 
 $(".devour-btn").click(function () {
+  console.log("you clicked me");
   const id = $(this).attr("data-id");
   $.ajax(`/api/burgers/${id}`, {
     type: "PATCH",

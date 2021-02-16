@@ -13,7 +13,6 @@ router.get("/", (req, res) => {
       burgers: data,
       devoured: devoured.length,
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -26,7 +25,7 @@ router.post("/api/burgers", (req, res) => {
   });
 });
 
-router.patch("/api/burger/:id", (req, res) => {
+router.patch("/api/burgers/:id", (req, res) => {
   burger.update(req.params.id, (err, data) => {
     if (err) return res.status(500).end();
     console.table(data);
