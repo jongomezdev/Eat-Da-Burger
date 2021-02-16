@@ -9,6 +9,7 @@ body {
   font-family: "Shrikhand", cursive;
   min-height: 100vh;
   text-align: center;
+  font-size: 20px;
 }
 
 .btn {
@@ -21,14 +22,13 @@ body {
   color: #91091e;
 }
 
-.container {
-  margin-top: 50px;
+h2 {
+  color: #91091e;
 }
 
 img {
   width: 500px;
   height: 500px;
-  vertical-align: auto;
 }
 
 .text {

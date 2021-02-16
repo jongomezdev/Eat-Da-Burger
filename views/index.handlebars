@@ -6,7 +6,7 @@
     <img src="assets/imgs/burger.png" alt="Burger Image">
   </div>
   <form id="create-burger">
-      <div class="input-group">
+      <div class="input-group mb-5">
         <input type="text" id="burger-name" class="validate form-control" placeholder="Create a burger!">
         <label for="burger-name"></label>
       <div class="input-group-append">
@@ -30,20 +30,18 @@
 {{!-- **************** Devoured ********************* --}}
     <div class="col">
       <h2 class="text-center display-4">Devoured</h2>
-      <ul>
         {{#each burgers}}
         {{#if this.devoured}}
-        <li>
-          <p>{{this.id}}. {{this.burger_name}}</p>
-        </li>
+        <div class="text">
+          {{this.id}}. {{this.burger_name}}
+        </div>
         {{/if}}
         {{/each}}
-      </ul>
-      <div class="row">
+      
         {{#if devoured}}
         <button id="clear-btn" class="btn devour-btn">Clear</button>
         {{/if}}
-      </div>
+      
     </div>
   </div>
 </div>
