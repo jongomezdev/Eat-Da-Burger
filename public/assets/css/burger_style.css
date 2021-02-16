@@ -8,6 +8,7 @@ body {
   background-image: linear-gradient(#91091e, #da723c, #c39e5c, #fdf1d6);
   font-family: "Shrikhand", cursive;
   min-height: 100vh;
+  text-align: center;
 }
 
 .btn {
@@ -21,18 +22,13 @@ body {
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 img {
-  justify-content: center;
-  height: 30vh;
-  width: 20vw;
-}
-
-.img-container {
-  justify-content: center;
-  align-items: center;
+  width: 500px;
+  height: 500px;
+  vertical-align: auto;
 }
 
 .text {
