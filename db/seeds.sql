@@ -1,4 +1,4 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES ('Cheeseburger', false),
-('Double Cheesburger', false),
-('Quad Bipass', true);
+INSERT INTO burgers (burger_name)
+VALUES ('Cheeseburger'),
+('Double Cheeseburger'),
+('Quad Bypass');

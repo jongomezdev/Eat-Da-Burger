@@ -5,13 +5,19 @@
 }
 
 body {
-  background-color: #fdf1d6;
+  background-image: linear-gradient(#91091e, #da723c, #c39e5c, #fdf1d6);
   font-family: "Shrikhand", cursive;
   min-height: 100vh;
 }
 
 .btn {
   background-color: #da723c;
+  color: #fff;
+  box-shadow: 0 20px 20px 0 rgba(245, 229, 4, 0.6);
+}
+
+.btn:hover {
+  color: #91091e;
 }
 
 .container {
