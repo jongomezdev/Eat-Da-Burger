@@ -2,26 +2,25 @@
 
 <hr>
 
-
-
 <div class="container">
-  <div>
-<img src="assets/imgs/burger.png" alt="Burger Image">
-</div>
-  <form id="create-burger">
-    <div class="input-group">
-        <label for="burger-name"></label>
-        <input type="text" id="burger-name" class="validate form-control" placeholder="Create a burger!">
-      <div class="input-group-append">
-        <button class="btn" type="submit">Create</button>
-        </form>
-      </div>
-    </div>
-  </form>
 
+  <div>
+    <img src="assets/imgs/burger.png" alt="Burger Image">
+  </div>
+
+  <form id="create-burger">
+      <div class="input-group">
+        <input type="text" id="burger-name" class="validate form-control" placeholder="Create a burger!">
+        <label for="burger-name"></label>
+      <div class="input-group-append">
+        <button class="btn" type="submit">Create</button>   
+      </div>
+      </div>
+  </form>
+{{!-- ******************** Burgers ************************ --}}
   <div class="row">
     <div class="col">
-      <h2>Burgers</h2>
+      <h2 class="text-center">Burgers</h2>
       <ul>
         {{#each burgers}}
         {{#unless this.devoured}}
@@ -33,9 +32,9 @@
         {{/each}}
       </ul>
     </div>
-
+{{!-- **************** Devoured ********************* --}}
     <div class="col">
-      <h2>Devoured</h2>
+      <h2 class="text-center">Devoured</h2>
       <ul>
         {{#each burgers}}
         {{#if this.devoured}}
@@ -47,7 +46,7 @@
       </ul>
       <div class="row">
         {{#if devoured}}
-        <button id="clear-btn" class="btn">Clear</button>
+        <button id="clear-btn" class="btn devour-btn">Clear</button>
         {{/if}}
       </div>
     </div>

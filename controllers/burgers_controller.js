@@ -1,6 +1,5 @@
 const express = require("express");
-const { end } = require("../config/connection.js");
-const burger = require("../models/burger.js");
+const burger = require("../models/burger");
 const router = express.Router();
 
 // Create all routes and set up logic.

@@ -7,7 +7,7 @@ const burger = {
   create: function (value, cb) {
     orm.insertOne(value, (err, data) => cb(err, data));
   },
-  update: function (cb) {
+  update: function (value, cb) {
     orm.updateOne(value, (err, data) => cb(err, data));
   },
   delete: function (cb) {
