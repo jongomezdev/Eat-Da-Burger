@@ -10,8 +10,8 @@
 </div>
   <form id="create-burger">
     <div class="input-group">
-        <label for=""></label>
-        <input type="text" class="form-control" placeholder="Create a burger!">
+        <label for="burger-name"></label>
+        <input type="text" id="burger-name" class="validate form-control" placeholder="Create a burger!">
       <div class="input-group-append">
         <button class="btn" type="submit">Create</button>
         </form>
@@ -27,7 +27,7 @@
         {{#unless this.devoured}}
         <li>
           <p>{{this.id}}. {{this.burger_name}}</p>
-          <button data-id='{{this.id}}' class="btn devour-btn">Devour</button>
+          <button data-id="{{this.id}}" class="btn devour-btn">Devour</button>
         </li>
         {{/unless}}
         {{/each}}
