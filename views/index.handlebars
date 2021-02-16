@@ -1,8 +1,13 @@
 <h1 class="text-center">Eat Da Burger</h1>
 
+<hr>
+
+
+
 <div class="container">
-
-
+  <div>
+<img class="center" src="assets/imgs/burger.png" alt="Burger Image">
+</div>
   <form action="">
     <div class="input-group">
         <label for=""></label>
@@ -26,7 +31,19 @@
         {{/each}}
       </ul>
     </div>
+
+    <div class="col">
+      <h2>Devoured</h2>
+      <ul>
+        {{#each burgers}}
+        <li>
+          <p>{{this.id}}. {{this.burger_name}}</p>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="row">
+        <button class="btn">Clear</button>
+      </div>
+    </div>
   </div>
-
-
 </div>
